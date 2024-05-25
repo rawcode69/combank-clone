@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+:root {
+    --font-size-10: 10px;
+    --font-size-12: 12px;
+    --font-size-14: 14px;
+    --font-size-16: 16px;
+    --font-size-18: 18px;
+    --font-size-26: 26px;
+    --font-size-28: 28px;
+    --font-size-32: 32px;
+    --font-size-38: 38px;
+    --font-size-45: 45px;
+    --color-light-gray: #3e4151;
+    --color-blakc-text: #000;
+    --color-blue-text: #0b66e5;
+
+}
+
+.top-nav {
+    padding: 10px;
+    margin-bottom: 1px;
+    font-family: 'Nunito', sans-serif;
+    font-size: var(--font-size-12);
+    line-height: 15px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    z-index: 1;
+
+    a {
+        text-decoration: none;
+        color: var(--color-light-gray);
+    }
+
+}
+
+.left-side {
+    display: flex;
+
+    ul {
+        display: flex;
+
+        li {
+            &:first-child {
+                margin-right: 10px;
+
+            }
+
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+
+}
+
+.com-container {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    max-width: 1300px;
+    justify-content: space-between;
+}
+
+.right-side {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.block {
+    display: flex;
+    border-right: 1px solid #e6e6e6;
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        margin: 0 15px;
+    }
+}
+
+.search-block {
+    display: flex;
+
+    a {
+        margin: 0 15px;
+    }
+
+    border-right: 1px solid #e6e6e6;
+}
+
+.dropdown-block {
+    display: flex;
+    border-right: 1px solid #e6e6e6;
+    width: 75px;
+    justify-content: center;
+}
+
+.country-icon {
+    background-image: url("/images/srilanka.png");
+    background-size: cover;
+    line-height: 15px;
+    width: 30px;
+    height: 16px;
+}
+
+.font-and-mode {
+    display: flex;
+    align-items: center;
+
+    a {
+        margin: 0 5px;
+    }
+}
+
+.light-mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #f4f4f4;
+    background-color: #f4f4f4;
+}
+
+.dark-mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    background-color: #333;
+    color: white !important;
+}
+
+.mobile-toggle-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background-color: #e0e2ea;
+
+    svg {
+        fill: #095bcc;
+        width: 25px;
+        height: 35px;
+    }
+}
+
+.bottom-nav {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    align-items: center;
+    margin: 0 15px;
+    /*z-index:0;*/
+}
+
+.mobile-toggle-button-container {
+    display: none;
+}
+
+.nav-links {
+    position: sticky;
+    display: flex;
+    padding-right: 60px;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.drop-down-li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-16);
+
+    >a {
+        text-decoration: none;
+        color: var(--color-blakc-text);
+        font-family: 'Nunito', sans-serif;
+        font-weight: 700;
+        line-height: 65px;
+    }
+
+
+}
+
+#drop-down-personal {
+    &:hover {
+        #dropdown-group-personal{
+            top: 65px !important;
+            left: 0 !important;
+            background-color: #f7f8f8;
+        }
+    }
+}
+
+#drop-down-business{
+    &:hover{
+        #dropdown-group-business{
+            top: 65px !important;
+            left: 0 !important;
+            background-color: #f7f8f8;
+        }
+    }
+}
+
+#drop-down-non-resident{
+    &:hover{
+        #dropdown-group-non-resident{
+            top: 65px !important;
+            left: 0 !important;
+            background-color: #f7f8f8;
+        }
+    }
+}
+
+#drop-down-service{
+    &:hover{
+        #dropdown-group-service{
+            top: 65px !important;
+            left: 0 !important;
+            background-color: #f7f8f8;
+        }
+    }
+}
+.dropdown-group-wrapper {
+    position: absolute;
+    top: -450px;
+    left: 0;
+    transition: all 200ms ease-in-out;
+    height: 496px;
+    /*border: 1px solid black;*/
+    z-index: -1;
+}
+
+.brand-logo {
+    width: 182.5px;
+    height: 55px;
+}
+
+.button-red {
+    padding: 8px 25px;
+    margin-right: 50px;
+    text-decoration: none;
+    background-color: #f13444;
+    display: flex;
+    border-radius: 25px;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-size: var(--font-size-12);
+    width: 170px;
+    height: 34px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    transition: scale 250ms ease-in;
+
+    &:hover {
+        scale: 0.97;
+    }
+}
+
+.digital-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    p {
+        font-size: var(--font-size-10);
+        margin: 2px 50px 0 0;
+
+    }
+}
+
+.com-container-2 {
+    display: flex;
+    width: 1300px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-group {
+    display: flex;
+
+}
+
+.submenu-content {
+    position: absolute;
+    display: flex;
+    /*border: 1px solid red;*/
+
+}
+
+#menu-1, #menu-2, #menu-3, #menu-4, #menu-5 {
+    visibility: hidden;
+}
+
+#business-menu-1, #business-menu-2, #business-menu-3, #business-menu-4, #business-menu-5 {
+    visibility: hidden;
+}
+
+#non-resident-1, #non-resident-2, #non-resident-3, #non-resident-4, #non-resident-5 {
+    visibility: hidden;
+}
+
+#service-menu {
+    display: flex;
+}
+
+.dropdown-group-wrapper {
+    width: 1300px
+}
+
+.sub-menu-content-wrapper {
+    /*position: absolute;*/
+}
+
+.dropdown-group-1{
+    position: relative;
+    display: flex;
+}
+.submenu-content-1 {
+    position: absolute;
+    display: flex;
+    left: 150px;
+    top: 0px;
+    visibility: hidden;
+}
+/*.nav-menu-item{*/
+/*    &:hover{*/
+/*        .submenu-content-1{*/
+/*            visibility: visible;*/
+/*        }*/
+/*    }*/
+/*}*/
+
+.nav-menu-item:hover .submenu-content-1 {
+    visibility: visible;
+}
+
+.nav-menu-item{
+    margin-bottom: 10px;
+    a{
+        text-decoration: none;
+        color: var(--color-blakc-text);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
