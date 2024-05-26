@@ -17,7 +17,7 @@
     --font-size-32: 32px;
     --font-size-38: 38px;
     --font-size-45: 45px;
-    --color-light-gray: #3e4151;
+    --color-light-gray: #919196;
     --color-blakc-text: #000;
     --color-blue-text: #0b66e5;
 
@@ -198,15 +198,29 @@
         line-height: 65px;
     }
 
+    /*&:hover {*/
+    /*    .dropdown-group-wrapper {*/
+    /*        height: 500px;*/
+    /*    }*/
+    /*}*/
 
+
+}
+
+.dropdown-group-wrapper {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 200ms ease-in-out;
+    background-color: #f7f8f8;
 }
 
 #drop-down-personal {
     &:hover {
         #dropdown-group-personal {
-            top: 65px !important;
-            left: 0 !important;
-            background-color: #f7f8f8;
+            height: 470px;
         }
     }
 }
@@ -214,9 +228,7 @@
 #drop-down-business {
     &:hover {
         #dropdown-group-business {
-            top: 65px !important;
-            left: 0 !important;
-            background-color: #f7f8f8;
+            height: 500px;
         }
     }
 }
@@ -224,9 +236,7 @@
 #drop-down-non-resident {
     &:hover {
         #dropdown-group-non-resident {
-            top: 65px !important;
-            left: 0 !important;
-            background-color: #f7f8f8;
+            height: 230px;
         }
     }
 }
@@ -234,22 +244,11 @@
 #drop-down-service {
     &:hover {
         #dropdown-group-service {
-            top: 65px !important;
-            left: 0 !important;
-            background-color: #f7f8f8;
+            height: 380px;
         }
     }
 }
 
-.dropdown-group-wrapper {
-    position: absolute;
-    top: -450px;
-    left: 0;
-    transition: all 200ms ease-in-out;
-    /*height: 496px;*/
-    /*border: 1px solid black;*/
-    z-index: -1;
-}
 
 .brand-logo {
     width: 182.5px;
@@ -301,27 +300,26 @@
 
 .dropdown-group {
     display: flex;
-
 }
 
-.submenu-content {
-    position: absolute;
-    display: flex;
-    /*border: 1px solid red;*/
+/*.submenu-content {*/
+/*    position: absolute;*/
+/*    display: flex;*/
+/*    !*border: 1px solid red;*!*/
 
-}
+/*}*/
 
-#menu-1, #menu-2, #menu-3, #menu-4, #menu-5 {
-    visibility: hidden;
-}
+/*#menu-1, #menu-2, #menu-3, #menu-4, #menu-5 {*/
+/*    visibility: hidden;*/
+/*}*/
 
-#business-menu-1, #business-menu-2, #business-menu-3, #business-menu-4, #business-menu-5 {
-    visibility: hidden;
-}
+/*#business-menu-1, #business-menu-2, #business-menu-3, #business-menu-4, #business-menu-5 {*/
+/*    visibility: hidden;*/
+/*}*/
 
-#non-resident-1, #non-resident-2, #non-resident-3, #non-resident-4, #non-resident-5 {
-    visibility: hidden;
-}
+/*#non-resident-1, #non-resident-2, #non-resident-3, #non-resident-4, #non-resident-5 {*/
+/*    visibility: hidden;*/
+/*}*/
 
 #service-menu {
     display: flex;
@@ -331,9 +329,6 @@
     width: 1300px
 }
 
-.sub-menu-content-wrapper {
-    /*position: absolute;*/
-}
 
 .dropdown-group-1 {
     position: relative;
@@ -341,6 +336,8 @@
 }
 
 .submenu-content-1 {
+    transition: visibility 250ms step-end;
+    width: 1100px;
     position: absolute;
     display: flex;
     left: 180px;
@@ -348,6 +345,7 @@
     visibility: hidden;
     padding-left: 50px;
     font-family: 'Nunito', sans-serif;
+
     li {
         a {
             text-decoration: none;
@@ -361,11 +359,11 @@
 }
 
 .prominent {
-    font-size: var(--font-size-16);
+    font-size: var(--font-size-16) !important;
     font-weight: 700;
     color: #111;
+    pointer-events: none !important;
 }
-
 
 
 .nav-menu-item:hover .submenu-content-1 {
@@ -385,6 +383,7 @@
         line-height: 22px;
         text-align: right;
         font-weight: 400;
+
         &:hover {
             color: var(--color-blue-text);
         }
@@ -397,7 +396,6 @@
     display: flex;
     flex-direction: column;
     /*justify-content: space-evenly;*/
-
 }
 
 #nav-menu-personal {
@@ -405,12 +403,54 @@
 }
 
 #nav-menu-business {
-    height: 495px;
+    height: 500px;
 }
 
 #nav-menu-non-resident {
     height: 230px;
 }
+
+.dropdown-column {
+
+    &:not(:last-child) {
+        border-right: 0.75px solid #e7e7e7;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    padding: 0 15px;
+
+    ul {
+        width: 100%;
+    }
+
+    a {
+        display: flex;
+        /*flex: 1;*/
+        font-size: var(--font-size-14);
+        line-height: 21px;
+        color: var(--color-blakc-text);
+        margin-bottom: 12px;
+        text-align: left;
+        width: auto;
+        max-width: 90%;
+    }
+
+}
+
+#service-menu {
+    width: 1300px;
+    padding: 20px;
+
+    a {
+        font-family: 'Nunito', sans-serif;
+        text-decoration: none;
+    }
+}
+
+
 
 
 
